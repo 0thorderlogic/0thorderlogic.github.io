@@ -77,7 +77,11 @@ dt a {
 
 summary {
 	cursor: pointer;
-	display: block;
+}
+
+summary a {
+	text-decoration: underline;
+	color: #1717EF; /* I had no other choice. */
 }
 
 pre {
