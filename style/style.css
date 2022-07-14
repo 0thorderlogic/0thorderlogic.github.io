@@ -46,7 +46,14 @@ img {
 
 blockquote {
 	font-family: 'IBM Plex Serif', serif;
+}
+
+.poster-image blockquote{
 	text-align: center;
+}
+
+blockquote .date {
+	float: right;
 }
 
 .dull {
@@ -54,9 +61,16 @@ blockquote {
 	font-style: italic;
 }
 
+.quips {
+	font-family: 'IBM Plex serif', serif;
+	text-align: left;	
+}
+
+.quips blockquote {
+	padding: 0px 15px 10px 30px;
+}
+
 .date {
-	/* border: 0; */
-	/* border-top: solid 1px var(--blue); */
 	color: var(--gray);
 }
 
