@@ -12,8 +12,8 @@ html {
 	margin: 0;
 	padding: 0;
 
-	font-family: 'Inter var', Helvetica, Serif, Monospace;
-	
+	font-family:'Times New Roman', Times, serif;
+
 	color: var(--black);
 	background-color: var(--white);
 
@@ -51,7 +51,7 @@ img {
 }
 
 blockquote {
-	font-family: 'IBM Plex Serif', serif;
+	font-style: italic;
 }
 
 .poster-image blockquote{
@@ -68,7 +68,7 @@ blockquote .date {
 }
 
 .quips {
-	font-family: 'IBM Plex serif', serif;
+	font-style: italic;
 	text-align: left;	
 }
 
