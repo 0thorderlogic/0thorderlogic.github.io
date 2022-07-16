@@ -5,59 +5,98 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Aryan's Homepage</title>
-    <link rel="shortcut icon" href="/images/icons/favicon.ico" type="image/x-icon">
-	<meta http-equiv="refresh" content="7; url=./home" />
+    <link rel="shortcut icon" href="/images/icons/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="/style/style.css">
 </head>
-
-<style>
-html {
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.whitespace {
-	/* outline: solid 2px red; */
-	padding: 270px;
-}
-
-svg {
-	margin-top: 50%;
-}
-
-#signature {
-	stroke-dasharray: 717.12451171875;
-	stroke-dashoffset: 717.12451171875;
-	animation: sign 7s ease;
-}
-
-@keyframes sign {
-	0% {
-		opacity: 1;
-	}
-   	50% {
-		stroke-dashoffset: 0;
-	}
-	100% {
-		opacity: 0;
-	}
-	/* to {
-		stroke-dashoffset: 0;
-	} */
-}
-</style>
-
 <body>
-<span class="whitespace"></span>
-<center>
-	<svg width="169" height="124" viewBox="0 0 169 124" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path id="signature" d="M33 22C20.453 43.4621 9.07686 63.6555 4.61111 88.3889C3.75794 93.1142 2 97.7052 2 102.5C2 104.488 4.40025 99.3106 5.33333 97.5556C9.9527 88.8668 14.591 80.1781 19.3333 71.5556C22.4152 65.9522 17.1049 68.319 16.2222 71.5556C15.1143 75.6179 16.8689 71.1111 18.5 71.1111C22.7567 71.1111 18.8265 81.4158 23.0556 81.9445C26.3524 82.3566 29.107 79.6593 31.3333 77.6111C32.318 76.7052 34 73.2732 34 74.6111C34 78.0918 36.7469 79.0015 38 75.5556C38.8091 73.3304 42.471 73.5157 44 71.2222C46.5581 67.3851 46.7829 65.9674 51.7778 69C52.917 69.6917 54.4452 70.4441 55.7778 69.7778C56.2087 69.5623 55.8479 70.7571 55.7222 71.2222C54.4557 75.9083 52.3421 80.3762 50.1111 84.6667C43.0758 98.196 33.8074 110.542 21 119C16.3335 122.082 9.21689 124.454 8.77778 116.111C8.13425 103.884 20.9404 92.9631 29.5556 86.1667C34.0546 82.6175 40.928 77.5715 47 77.1667C55.1558 76.6229 58.1607 84.0079 61.5 89.9445C66.152 98.2147 74.0228 89.9316 76.1111 83.6667C77.1123 80.6631 77.4259 76.5925 76.7778 73.4445C76.4165 71.6895 76.9472 74.2237 78 74.7778C81.171 76.4467 81.6645 73.1298 84 73C88.8712 72.7294 90.3562 69.4088 94.5556 67.5C99.6453 65.1865 106.188 62.1518 111.778 63.2222C115.616 63.9573 119.332 65.4813 123.222 66C134.14 67.4558 146.428 58.6352 153.333 51.1111C162.736 40.8669 170.518 21.8446 165.556 7.88889C162.883 0.372206 154.754 0.333999 148.556 3.55556C134.089 11.0749 126.658 29.385 122.222 44C119.002 54.6119 116.379 67.4753 118.556 78.6667C119.216 82.0619 121.261 90.0299 115.944 82.0556C115.084 80.7646 109.113 70.2767 111.111 68.7778C112.009 68.1042 117.504 82.5902 117.833 83.6111C120.364 91.4555 121.983 94.0031 127.444 86.5556C130.316 82.6392 130.022 83.178 134.222 81.7778C137.185 80.7902 138.411 77.1592 141.222 76.2222C148.106 73.9278 155.014 77.7944 162 75" stroke="black" stroke-width="3" stroke-linecap="round"/>
-	</svg>
-</center>
+	<header id="box">
+		<svg width="169" height="124" viewBox="0 0 169 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path id="signature" d="M33 22C20.453 43.4621 9.07686 63.6555 4.61111 88.3889C3.75794 93.1142 2 97.7052 2 102.5C2 104.488 4.40025 99.3106 5.33333 97.5556C9.9527 88.8668 14.591 80.1781 19.3333 71.5556C22.4152 65.9522 17.1049 68.319 16.2222 71.5556C15.1143 75.6179 16.8689 71.1111 18.5 71.1111C22.7567 71.1111 18.8265 81.4158 23.0556 81.9445C26.3524 82.3566 29.107 79.6593 31.3333 77.6111C32.318 76.7052 34 73.2732 34 74.6111C34 78.0918 36.7469 79.0015 38 75.5556C38.8091 73.3304 42.471 73.5157 44 71.2222C46.5581 67.3851 46.7829 65.9674 51.7778 69C52.917 69.6917 54.4452 70.4441 55.7778 69.7778C56.2087 69.5623 55.8479 70.7571 55.7222 71.2222C54.4557 75.9083 52.3421 80.3762 50.1111 84.6667C43.0758 98.196 33.8074 110.542 21 119C16.3335 122.082 9.21689 124.454 8.77778 116.111C8.13425 103.884 20.9404 92.9631 29.5556 86.1667C34.0546 82.6175 40.928 77.5715 47 77.1667C55.1558 76.6229 58.1607 84.0079 61.5 89.9445C66.152 98.2147 74.0228 89.9316 76.1111 83.6667C77.1123 80.6631 77.4259 76.5925 76.7778 73.4445C76.4165 71.6895 76.9472 74.2237 78 74.7778C81.171 76.4467 81.6645 73.1298 84 73C88.8712 72.7294 90.3562 69.4088 94.5556 67.5C99.6453 65.1865 106.188 62.1518 111.778 63.2222C115.616 63.9573 119.332 65.4813 123.222 66C134.14 67.4558 146.428 58.6352 153.333 51.1111C162.736 40.8669 170.518 21.8446 165.556 7.88889C162.883 0.372206 154.754 0.333999 148.556 3.55556C134.089 11.0749 126.658 29.385 122.222 44C119.002 54.6119 116.379 67.4753 118.556 78.6667C119.216 82.0619 121.261 90.0299 115.944 82.0556C115.084 80.7646 109.113 70.2767 111.111 68.7778C112.009 68.1042 117.504 82.5902 117.833 83.6111C120.364 91.4555 121.983 94.0031 127.444 86.5556C130.316 82.6392 130.022 83.178 134.222 81.7778C137.185 80.7902 138.411 77.1592 141.222 76.2222C148.106 73.9278 155.014 77.7944 162 75" stroke="black" stroke-width="3" stroke-linecap="round"/>
+		</svg>
+	</header>
+	
+	<main id="box">
+		<p>Hi, I am Aryan, although some people insist on calling me Sanket <span class="dull">(of Indian origin means Signal)</span>.</p>
+	</main>
+
+	<div id="box" class="poster-image">
+		<a target="_blank" href="/images/wallpapers/poster.png">	
+			<img src="/images/wallpapers/poster.png" title="Armageddon by Aryan Singh" alt="Cover poster for Armageddon"/>
+		</a>
+		<blockquote>
+			“ And I heard a voice in the midst of the four beasts.
+			And I looked and behold, a pale horse<br/>
+			And his name that sat of him was Death.
+			And Hell followed with him ”
+		</blockquote>
+	</div>
+
+	<div id="box">
+		<!-- Here I write a lot of shit -->
+		<p>I don't have a very organized schedule but I have a placeholders in place. Please check my <a target="_blank" href="https://calendar.google.com/calendar/u/1/embed?src=aryansingh_cse2021@msit.edu.in&ctz=Asia/Kolkata&csspa=1">calender</a> before scheduling something.</p>
+		<p>I spend a lot of time on Computer Science Stack Exchange. I am probably <a target="_blank" href="https://cs.stackexchange.com/users/152190/aryan-singh">logged in right now</a>.</p>
+		<p>I perform standup comedy and write comedy sketches sometimes, If I have any upcoming shows I will list them <a href="#">here</a>.</p>
+		<p>
+			One of my hobbies is playing with Linux, I am a contributor to the <a target="_blank" href="https://getfedora.org">Fedora Project</a>.
+			You can also take a look at my setups here, I also post them on <a target="_blank" href="https://www.reddit.com/r/unixporn/">r/unixporn</a>,
+			<a target="_blank" href="/images/workspace-setups/bspwm.png">BSPWM</a>,
+			<a target="_blank" href="/images/workspace-setups/gnome.png">GNOME</a>,
+			<a target="_blank" href="/images/workspace-setups/gnome-again.png">GNOME again</a>,
+			<a target="_blank" href="/images/workspace-setups/xfce.png">XFCE</a>.
+		</p>
+		<p>I have been thinking about starting a blog if I do here's a <a href="/blog">link to the blog</a>.</p>
+		<p>You can download few of my favourite wallpapers <a target="_blank" href="/images/wallpapers/gruvbox-astro.png">Gruvbox Astronaut</a> and <a target="_blank" href="/images/wallpapers/gruvbox-arch.png">Gruvbox Arch Linux</a>.</p>
+		<p>You might want to download my <a target="_blank" href="https://raw.githubusercontent.com/aoneone5/aoneone5.github.io/main/pgp.asc">pgp-key</a> or just view it.</p>
+		<p>I listen to a lot of music you can subscribe to my <a target="_blank" href="https://open.spotify.com/playlist/08bxnZfZ1DCi0z79W3mwaf">spotify playlist</a>.</p>
+
+		<div class="quips">
+			<p>Quips By Aryan Singh</p>
+			<blockquote>The ceiling fans in the old Indian parliament are upside down. We are robbing the ministers of the opportunity to commit suicide. Thank God we are about to do something about it!<br/><span class="date">Written on Dec 2020</span></blockquote>
+			<blockquote>Kinley’s bottle looks like an alien dildo.<br/><span class="date">Written on Jan 2017</span></blockquote>
+		</div>
+	</div>
+
+	<div id="box">
+		<h1>Disclaimer</h1>
+		<p>Aryan Singh, 2017<br/>I made this site. All opinions stated here is shared by my friends, my family a large group of people from the Internet. I've never met, the cast of "Enterprise" and PM Modi. I plan on being a scientist! All content is subject to change.</p>
+<details>
+	<summary id="vim-block"><a>View the original block of text I wrote in vim.</a></summary>
+<pre>
+/**
+* Aryan Singh, 2017
+* I made this site
+* All opinions stated
+* here are shared
+* by my friends, my family
+* a large group of people
+* from the Internet.
+* I've never met, the cast of
+* "Enterprise" and PM Modi.
+* I plan on being a scientist!
+* Content here is subject to change.
+**/
+</pre>
+</details>
+	</div>
+
+	<div id="box">
+		<p>Have a nice day.</p>
+		<p>~ a115 <a title="Personal email and Fedora related queries" href="mailto:aoneone5@protonmail.com">aoneone5 [at] protonmail [dot] com</a></p>
+		<p><span>~ MSIT </span><a title="A email provided to me by my undergraduate Institute i.e Meghnad Saha Institute of Technology" href="mailto:aryansingh_cse2021@msit.edu.in">aryansingh_cse2021 [at] msit [dot] edu [dot] in</a></p>
+	</div>
+
+	<div id="box">
+		<hr/>
+	</div>
+	
+	<div id="box">
+		<h1>Gratuitous Links</h1>
+		<dt><img src="/images/icons/csse-blackbg.png" title="Computer Science Stack Exchange"><a target="_blank" href="https://cs.stackexchange.com/users/152190/aryan-singh">Computer Science Stack Exchange</a></dt>
+		<dt><img src="/images/icons/twitter.png" title="Twitter"><a target="_blank" href="https://twitter.com/0thorderlogic">@0<sup>th</sup>orderlogic</a></dt>
+		<dt><img src="/images/icons/github.png" title="GitHub"><a target="_blank" href="https://github.com/0thorderlogic">@0<sup>th</sup>orderlogic</a></dt>
+		<dt><img src="/images/icons/board.png" title="Chess.com"><a target="_blank" href="https://www.chess.com/member/0thorderlogic">@0<sup>th</sup>orderlogic</a></dt>
+		<dt><img src="/images/icons/instagram.png" title="Instagram"><a target="_blank" href="https://www.instagram.com/aryansingh42069/">@aryansingh42069</a></dt>
+	</div>
+
 </body>
 </html>
-<!-- 
-	Thank you Fireship
-	https://www.youtube.com/shorts/LuWdeuPMHps
- -->
