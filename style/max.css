@@ -1,4 +1,23 @@
 @media screen and (min-width: 800px) {
+	header {
+		display: flex;
+		margin: 0;
+		padding: 0;
+	}
+	h1 {
+		float: right;
+		visibility: none;
+	}
+	.icons {
+		display: flex;
+		align-items: center;
+		visibility: visible;
+		float: right;
+		margin-left: 45%;
+	}
+	.icons a{
+		padding: 20px;
+	}
 	#research-interest {
 		display: flex;
 		align-items: center;

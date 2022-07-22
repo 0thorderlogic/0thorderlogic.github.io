@@ -75,6 +75,10 @@ h2 {
 	width: 25px;
 }
 
+.icons {
+	visibility: collapse;
+}
+
 #misc blockquote {
 	background-color: var(--gray);
 	opacity: 69%;
