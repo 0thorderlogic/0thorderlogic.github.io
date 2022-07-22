@@ -46,8 +46,16 @@ header h1 {
 	font-size: 3em;
 }
 
+h2 {
+	cursor: pointer;
+}
+
 .dull {
 	opacity: 69%;
+}
+
+#bio {
+	margin-top: 3em;
 }
 
 #research-interest img{
@@ -77,9 +85,14 @@ header h1 {
 }
 
 #misc blockquote .date{
+	padding-top: 5px;
 	float: right;
 	font-size: smaller;
 	font-style: normal;
+}
+
+summary {
+	cursor: pointer;
 }
 
 pre {
@@ -88,7 +101,7 @@ pre {
 
 hr {
 	border: 0;
-	border-bottom: solid 1px var(--blue);
+	border-bottom: solid 1px var(--gray);
 }
 
 ::-webkit-scrollbar {
