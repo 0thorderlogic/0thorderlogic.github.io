@@ -5,33 +5,35 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Aryan's Homepage</title>
-    <link rel="shortcut icon" href="/images/icons/United_Federation_of_Planets_logo.svg" type="image/x-icon">	
+	<link rel="stylesheet" href="/style/font.css">
 	<link rel="stylesheet" href="/style/style.css">
+	<link rel="stylesheet" href="/style/max.css">
+	<link rel="apple-touch-icon" sizes="152x152" target="_blank" href="/images/icons/United_Federation_of_Planets_logo.svg">
+	<link rel="shortcut icon" target="_blank" href="/images/icons/United_Federation_of_Planets_logo.svg">
 </head>
 <body>
-	<header id="box">
-		<h1>Aryan's Homepage</h1>
+	<header>
+		<a href="/"><h1>Aryan's Homepage</h1></a>
+		<hr/>
 	</header>
-	
-	<main id="box">
-		<p>Hi, I am Aryan, although some people insist on calling me Sanket <span class="dull">(of Indian origin means Signal)</span>.</p>
-	</main>
 
-	<div id="box" class="poster-image">
-		<a target="_blank" href="/images/wallpapers/poster.png">	
-			<img src="/images/wallpapers/poster.png" title="Armageddon by Aryan Singh" alt="Cover poster for Armageddon"/>
-		</a>
-		<blockquote>
-			“ And I heard a voice in the midst of the four beasts.
-			And I looked and behold, a pale horse<br/>
-			And his name that sat of him was Death.
-			And Hell followed with him ”
-		</blockquote>
+	<div class="box" id="bio">
+		<p>Hi, I am Aryan, although some people insist on calling me Sanket <span class="dull">(of Indian origin means Signal)</span>.</p>
 	</div>
 
-	<div id="box">
-		<!-- Here I write a lot of shit -->
-		<p>I don't have a very organized schedule but I have a placeholders in place. Please check my <a target="_blank" href="https://calendar.google.com/calendar/u/1/embed?src=aryansingh_cse2021@msit.edu.in&ctz=Asia/Kolkata&csspa=1">calender</a> before scheduling something.</p>
+	<div class="box" id="research-interest">
+		<div>
+			<h2>Research Interest</h2>
+			<p>My primary field of study is theoretical Computer Science, and my particular favourites include Digital Logic, Data Structure and Algorithms, and Linux.</p>
+		</div>
+		<div>
+			<img src="/images/real_programmers.png" title="Real Programmer Meme" alt="Real Programmer Meme"> 
+		</div>
+	</div>
+
+	<div class="box" id="misc">
+		<h2>Miscellaneous</h2>
+		<p>I don't have a very organized schedule but I have a placeholders in place. Please check my <a target="_blank" href="https://calendar.google.com/calendar/u/1/embed?src=aryansingh_cse2021@msit.edu.in&ctz=Asia/Kolkata&csspa=1">calender</a>, or the download and view the <a href="/static/ics/2022-06-29.ics">ics</a> file before scheduling something.</p>
 		<p>I spend a lot of time on Computer Science Stack Exchange. I am probably <a target="_blank" href="https://cs.stackexchange.com/users/152190/aryan-singh">logged in right now</a>.</p>
 		<p>I perform standup comedy and write comedy sketches sometimes, If I have any upcoming shows I will list them <a href="#">here</a>.</p>
 		<p>
@@ -42,9 +44,8 @@
 			<a target="_blank" href="/images/workspace-setups/gnome-again.png">GNOME again</a>,
 			<a target="_blank" href="/images/workspace-setups/xfce.png">XFCE</a>.
 		</p>
-		<p>I have been thinking about starting a blog if I do here's a <a href="/blog">link to the blog</a>.</p>
 		<p>You can download few of my favourite wallpapers <a target="_blank" href="/images/wallpapers/gruvbox-astro.png">Gruvbox Astronaut</a> and <a target="_blank" href="/images/wallpapers/gruvbox-arch.png">Gruvbox Arch Linux</a>.</p>
-		<p>You might want to download my <a target="_blank" href="https://raw.githubusercontent.com/aoneone5/aoneone5.github.io/main/pgp.asc">pgp-key</a> or just view it.</p>
+		<p>You might want to download my <a target="_blank" href="https://raw.githubusercontent.com/0thorderlogic/0thorderlogic.github.io/main/pgp.asc">pgp-key</a> or just view it.</p>
 		<p>I listen to a lot of music you can subscribe to my <a target="_blank" href="https://open.spotify.com/playlist/08bxnZfZ1DCi0z79W3mwaf">spotify playlist</a>.</p>
 
 		<div class="quips">
@@ -54,8 +55,18 @@
 		</div>
 	</div>
 
-	<div id="box">
-		<h1>Disclaimer</h1>
+	<div class="box" id="publications">
+		<h2>Publications</h2>
+		<p>None yet.</p>
+	</div>
+	
+	<div class="box" id="essays">
+		<h2>Essays</h2>
+		<p>PDFs available soon.</p>
+	</div>
+
+	<div class="box" id="disclaimer">
+		<h2>Disclaimer</h2>
 		<p>Aryan Singh, 2017<br/>I made this site. All opinions stated here is shared by my friends, my family a large group of people from the Internet. I've never met, the cast of "Enterprise" and PM Modi. I plan on being a scientist! All content is subject to change.</p>
 <details>
 	<summary id="vim-block"><a>View the original block of text I wrote in vim.</a></summary>
@@ -75,26 +86,23 @@
 **/
 </pre>
 </details>
-	</div>
+</div>
 
-	<div id="box">
-		<p>Have a nice day.</p>
-		<p>~ a115 <a title="Personal email and Fedora related queries" href="mailto:aoneone5@protonmail.com">aoneone5 [at] protonmail [dot] com</a></p>
-		<p><span>~ MSIT </span><a title="A email provided to me by my undergraduate Institute i.e Meghnad Saha Institute of Technology" href="mailto:aryansingh_cse2021@msit.edu.in">aryansingh_cse2021 [at] msit [dot] edu [dot] in</a></p>
-	</div>
+<div class="box">
+	<p>Have a nice day.</p>
+	<p>- a115 <a title="Personal email and Fedora related queries" href="mailto:aoneone5@protonmail.com">aoneone5 [at] protonmail [dot] com</a></p>
+	<p>- MSIT <a title="A email provided to me by my undergraduate Institute i.e Meghnad Saha Institute of Technology" href="mailto:aryansingh_cse2021@msit.edu.in">aryansingh_cse2021 [at] msit [dot] edu [dot] in</a></p>
+</div>
 
-	<div id="box">
-		<hr/>
+<div class="box">
+	<hr/>
+	<div class="box" id="social-icons">
+		<dt><a target="_blank" href="https://github.com/0thorderlogic"><img id="icon" src="/images/icons/github.svg"></a></dt>
+		<dt><a target="_blank" href="https://twitter.com/0thorderlogic"><img id="icon" src="/images/icons/twitter.svg"></a></dt>
+		<dt><a target="_blank" href="https://www.instagram.com/aryansingh42069/"><img id="icon" src="/images/icons/instagram.svg"></a></dt>
+		<dt><a target="_blank" href="mailto:aoneone5@protonmail.com"><img id="icon" src="/images/icons/envelope.svg"></a></dt>
 	</div>
-	
-	<div id="box">
-		<h1>Gratuitous Links</h1>
-		<dt><img src="/images/icons/csse-blackbg.png" title="Computer Science Stack Exchange"><a target="_blank" href="https://cs.stackexchange.com/users/152190/aryan-singh">Computer Science Stack Exchange</a></dt>
-		<dt><img src="/images/icons/twitter.png" title="Twitter"><a target="_blank" href="https://twitter.com/0thorderlogic">@0<sup>th</sup>orderlogic</a></dt>
-		<dt><img src="/images/icons/github.png" title="GitHub"><a target="_blank" href="https://github.com/0thorderlogic">@0<sup>th</sup>orderlogic</a></dt>
-		<dt><img src="/images/icons/board.png" title="Chess.com"><a target="_blank" href="https://www.chess.com/member/0thorderlogic">@0<sup>th</sup>orderlogic</a></dt>
-		<dt><img src="/images/icons/instagram.png" title="Instagram"><a target="_blank" href="https://www.instagram.com/aryansingh42069/">@aryansingh42069</a></dt>
-	</div>
+</div>
 
 </body>
 </html>
