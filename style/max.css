@@ -1,0 +1,13 @@
+@media screen and (min-width: 800px) {
+	#research-interest {
+		display: flex;
+		align-items: center;
+	}
+	#research-interest img {
+		width: 500px;
+		float: right;
+	}
+	#research-interest p{
+		float: left;
+	}
+}

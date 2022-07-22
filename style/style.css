@@ -1,20 +1,19 @@
 :root {
 	/* Color scheme */
-	--black: #000000; 
-	--white: ;
-	--gray: #3C3D3F;
-	--aliceblue: aliceblue;
+	--white: #FFF;
 	--blue: #1E1E2E;
-	--pink: #D3869B;
+	--purple: #D3869B;
+	--gray: rgba(128, 128, 128, 0.26);
+	--sky-blue: #01D3D6;
 }
 
 html {
 	margin: 0;
 	padding: 0;
 
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-	color: var(--black);
+	color: var(--blue);
 	background-color: var(--white);
 
 	display: flex;
@@ -25,99 +24,71 @@ html {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
 body {
-	width: 900px;
-	overflo-x: hidden;
+	width: 1300px;
+	overflow-x: hidden;
 }
 
 a {
 	text-decoration: none;
+	color: var(--purple);
 }
 
-#box {
+.box {
 	margin-bottom: 3em;
 }
 
-h1 {
-	font-size: 2em;
-}
-
-img {
-	cursor: pointer;
-	width: 100%;
-}
-
-blockquote {
-	font-style: italic;
-}
-
-.poster-image blockquote{
-	text-align: center;
-}
-
-blockquote .date {
-	float: right;
+header h1 {
+	color: var(--blue);
+	font-weight: 900;
+	letter-spacing: -3px;
+	font-size: 3em;
 }
 
 .dull {
-	color: var(--gray);
-	font-style: italic;
+	opacity: 69%;
 }
 
-.quips {
-	font-style: italic;
-	text-align: left;	
+#research-interest img{
+	width: 100%;
 }
 
-.quips blockquote {
-	padding: 0px 15px 10px 30px;
-}
-
-.date {
-	color: var(--gray);
-}
-
-dt {
+#social-icons {
 	display: flex;
-	align-items: center;
-	margin-bottom: 10px;
+	justify-content: center;
 }
 
-dt img {
-	width: 30px;
-	cursor: pointer;
+#social-icons dt {
+	padding: 10px;
 }
 
-dt a {
-	margin: 0px 0px 0px 10px;
+#icon {
+	width: 25px;
 }
 
-summary {
-	cursor: pointer;
+#misc blockquote {
+	background-color: var(--gray);
+	opacity: 69%;
+	font-style: italic;
+	padding: 30px;
+	border: 0;
+	border-left: solid 5px var(--purple);
 }
 
-summary a {
-	color: #1717EF; /* I had no other choice. */
+#misc blockquote .date{
+	float: right;
+	font-size: smaller;
+	font-style: normal;
 }
 
 pre {
 	font-family: 'Courier New', Courier, monospace;
-	color: var(--blue);
-	padding: 10px;
 }
 
 hr {
 	border: 0;
-	border-top: solid 1px var(--blue);
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
+	border-bottom: solid 1px var(--blue);
 }
 
 ::-webkit-scrollbar {
