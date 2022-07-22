@@ -91,6 +91,24 @@ h2 {
 	font-style: normal;
 }
 
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#left {
+	margin-right: 10px;
+}
+
+#right {
+	margin-left: 10px;
+}
+
+.writings ul li{
+	margin-bottom: 10px;
+}
+
 summary {
 	cursor: pointer;
 }
