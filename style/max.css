@@ -13,10 +13,16 @@
 		align-items: center;
 		visibility: visible;
 		float: right;
-		margin-left: 45%;
+		margin-left: 10%;
 	}
 	.icons a{
-		padding: 20px;
+		color: var(--blue);
+		font-family: 'Bebas Neue', 'Inter';
+		padding: 5px;
+		font-size: larger;
+	}
+	.icons a:hover {
+		color: var(--orange);
 	}
 	#research-interest {
 		display: flex;
