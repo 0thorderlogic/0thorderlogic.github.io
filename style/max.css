@@ -26,13 +26,13 @@
 	}
 	#research-interest {
 		display: flex;
-		align-items: center;
 	}
 	#research-interest img {
-		width: 500px;
+		width: 550px;
 		float: right;
 	}
 	#research-interest p{
 		float: left;
+		margin-right: 10px;
 	}
 }
