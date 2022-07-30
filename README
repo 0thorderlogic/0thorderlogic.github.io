@@ -1,7 +1,10 @@
 # aoneone5.github.io
 
 Here lies the code for my personal website
-.
+
+FILE STRUCT
+-----------------------------
+
 ├── 404.html
 ├── academia.html
 ├── images
@@ -71,5 +74,5 @@ Here lies the code for my personal website
     ├── font.css
     ├── max.css
     └── style.css
-
+    
 13 directories, 56 files
