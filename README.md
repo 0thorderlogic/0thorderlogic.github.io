@@ -1,5 +1,3 @@
-# Aryan’s Homepage
-
 comedian, writer — child in primitive culture
 
 [He is available for shows.](https://7aux26p1mrz.typeform.com)
