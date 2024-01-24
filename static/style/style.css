@@ -1,9 +1,13 @@
 html {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Helvetica, sans-serif;
+	font-weight: 500;
 }
-a {
+img {
+	width: 300px;
+}
+a, a:visited, a:hover{
 	text-decoration: none;
-	color: blue;
+	color: magenta;
 }
 .view {
 	float: right;
@@ -11,11 +15,12 @@ a {
 #right {
 	margin-left: 10px;
 }
-.flex-box {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-img {
-	width: 400px;
+@media only screen and (max-width: 600px) {
+	.flex-box {
+		display: flex;
+		justify-content: center;
+	}
+	img {
+		width: 100%;
+	}
 }
