@@ -1,0 +1,103 @@
+SET-7. Write and run a TCP client and a TCP server program using ‘JAVA’ language in Unix/Linux as per
+
+the following details:                                                                                                                                                                                        
+
+(a)  Establish a TCP connection between a TCP client and a TCP server. 
+
+(b)  Client program will send three numbers to the server.
+
+( C ) Server will return the smallest number to the client. 
+
+
+
+TCPserver:
+---------------------------------------------------------
+
+import java.io.*;
+import java.net.*;
+
+public class TCPServer {
+    public static void main(String[] args) {
+        try (ServerSocket serverSocket = new ServerSocket(6789)) {
+            System.out.println("Server is listening on port 6789");
+           
+            while (true) {
+                Socket socket = serverSocket.accept();
+                System.out.println("New client connected");
+
+                new ServerThread(socket).start();
+            }
+        } catch (IOException ex) {
+            System.out.println("Server exception: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+    }
+}
+
+class ServerThread extends Thread {
+    private Socket socket;
+
+    public ServerThread(Socket socket) {
+        this.socket = socket;
+    }
+
+    public void run() {
+        try (InputStream input = socket.getInputStream();
+             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+             OutputStream output = socket.getOutputStream();
+             PrintWriter writer = new PrintWriter(output, true)) {
+			String numbersLine = reader.readLine();
+            String[] numbers = numbersLine.split(" ");
+            int num1 = Integer.parseInt(numbers[0]);
+            int num2 = Integer.parseInt(numbers[1]);
+            int num3 = Integer.parseInt(numbers[2]);
+
+            int smallest = Math.min(num1, Math.min(num2, num3));
+
+            writer.println("The smallest number is: " + smallest);
+
+        } catch (IOException ex) {
+            System.out.println("Server exception: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+    }
+}
+
+TCPclient:
+-----------------------------------------------------------
+
+import java.io.*;
+import java.net.*;
+
+public class TCPClient {
+    public static void main(String[] args) {
+        String hostname = "localhost";
+        int port = 6789;
+
+        try (Socket socket = new Socket(hostname, port)) {
+
+            OutputStream output = socket.getOutputStream();
+            PrintWriter writer = new PrintWriter(output, true);
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+            // Send three numbers to the server
+            String numbers = "12 5 8";
+            writer.println(numbers);
+
+            // Read the server's response
+            String response = reader.readLine();
+            System.out.println(response);
+
+        } catch (UnknownHostException ex) {
+            System.out.println("Server not found: " + ex.getMessage());
+        } catch (IOException ex) {
+            System.out.println("I/O error: " + ex.getMessage());
+        }
+    }
+}
+
+OUTPUT:
+------------------------------------------------------------------
+
+https://i.postimg.cc/KzFGsMSP/image-3.png

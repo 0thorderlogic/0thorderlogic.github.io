@@ -1,0 +1,105 @@
+SET-9. Write and run a TCP Client and a TCP Server program using 'JAVA' language in Unix/Linux operating system as per the following specifications :                                                                                       
+
+(a)  Establish a TCP connection between a TCP client and a TCP server. 
+
+(b)  Client will send a text string to the Server.
+
+(c) Server will check whether the string is a palindrome or not. Result will be send to the respective Client.
+
+
+Ans: -
+To perform this at first, we have to create two separate Java files on our directory one for Server and
+other one for the Client with the help of ‘vim’ editor. Then we can write the code to setup TCPserver and
+TCPclient locally.
+
+
+TCPserver:
+-------------------------------------------------------------
+
+import java.io.*;
+import java.net.*;
+public class TCPserver {
+ public static void main(String[] args) {
+ try (ServerSocket serverSocket = new ServerSocket(6789)) {
+ System.out.println("Server is listening on port 6789");
+ while (true) {
+ Socket socket = serverSocket.accept();
+ System.out.println("New client connected");
+ new ServerThread(socket).start();
+ }
+ } catch (IOException ex) {
+ ex.printStackTrace();
+ }
+ }
+}
+class ServerThread extends Thread {
+ private Socket socket;
+ public ServerThread(Socket socket) {
+ this.socket = socket;
+ }
+ public void run() {
+ try (InputStream input = socket.getInputStream();
+ BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+ OutputStream output = socket.getOutputStream();
+ PrintWriter writer = new PrintWriter(output, true)) {
+ String text;
+ while ((text = reader.readLine()) != null) {
+ System.out.println("Received: " + text);
+ String result = isPalindrome(text) ? "Palindrome" : "Not Palindrome";
+ writer.println(result);
+ }
+ } catch (IOException ex) {
+ ex.printStackTrace();
+ }
+ }
+ private boolean isPalindrome(String text) {
+ String clean = text.replaceAll("\\s+", "").toLowerCase();
+ int length = clean.length();
+ for (int i = 0; i < length / 2; i++) {
+ if (clean.charAt(i) != clean.charAt(length - 1 - i)) {
+ return false;
+ }
+ }
+ return true;
+ }
+}
+
+
+TCPclient:
+----------------------------------------------------------------------
+
+import java.io.*;
+import java.net.*;
+public class TCPclient {
+ public static void main(String[] args) {
+ String hostname = "localhost";
+ int port = 6789;
+ try (Socket socket = new Socket(hostname, port);
+ OutputStream output = socket.getOutputStream();
+ PrintWriter writer = new PrintWriter(output, true);
+ InputStream input = socket.getInputStream();
+ BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+ BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in))) {
+ String text;
+ while (true) {
+ System.out.print("Enter string: ");
+ text = consoleReader.readLine();
+ writer.println(text);
+ String response = reader.readLine();
+ System.out.println(response);
+ if ("exit".equalsIgnoreCase(text)) {
+ break;
+ }
+ }
+ } catch (UnknownHostException ex) {
+ System.out.println("Server not found: " + ex.getMessage());
+ } catch (IOException ex) {
+ System.out.println("I/O error: " + ex.getMessage());
+ }
+ }
+}
+
+output:
+---------------------------------------------------------
+
+https://i.postimg.cc/ryxbwP4w/image-4.png
