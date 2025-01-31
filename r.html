@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Based on Input</title>
+    <script type="text/javascript">
+        function redirectToPage() {
+            // Get the URL parameters
+            const params = new URLSearchParams(window.location.search);
+            const inputNumber = params.get('number');
+
+            // Define redirection URLs based on the input number
+            let redirectUrl;
+            switch (inputNumber) {
+                case '1':
+                    redirectUrl = 'https://www.figma.com/design/flCjyzacOxQsNV4Ozp7zuQ/Map?node-id=5-48&t=mgxWmtpPLO1oLJ1S-1';
+                    break;
+                case '2':
+                    redirectUrl = 'https://0thorderlogic.github.io/static/pdfs/Publications/2023/popularity_analysis_on_progamming_languages.pdf';
+                    break;
+                case '3':
+                    redirectUrl = 'https://github.com/0thorderlogic/cs';
+                    break;
+                default:
+                    redirectUrl = './'; // Redirect for invalid input
+            }
+
+            // Redirect to the determined URL
+            window.location.href = redirectUrl;
+        }
+    </script>
+</head>
+<body onload="redirectToPage()">
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected, please click <a href="http://example.com/">here</a>.</p>
+</body>
+</html>
