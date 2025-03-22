@@ -1,24 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap');
+
 :root {
-	--background: white;
-	--text: black;
-	--link: orange;
+	--background: #141420;
+	--text: #fefeff;
+	--link: #d5fe17;
+	--link-hover: #7c56e5;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 html {
-	font-weight: 400;
-    font-family: 'Creato Display';
-
+	font-weight: 300;
+    font-family: 'Overpass Mono';
+	text-transform: uppercase;
 	background-color: var(--background);
-
 	color: var(--text);
 }
+body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+	padding: 0px 20px;
+}
+main {
+    flex: 1;
+}
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 h1 {
-	font-size: 3em;
+	text-transform: lowercase;
+    font-family: 'Cirka';
+	font-size: 100px;
+
+	justify-content: center;
+	align-items: center;
+
+	font-weight: 300;
 }
 img {
 	width: 100px;
-}
-p,ul,ol,li, footer {
-	font-size: 2em;
 }
 a, a:visited{
 	text-decoration: none;
@@ -26,17 +52,7 @@ a, a:visited{
 }
 a:hover {
 	text-decoration: none;
-	color: var(--text);
-}
-img{
-	/* outline: auto; */
-	max-width: 300px;
-}
-.view {
-	float: right;
-}
-#right {
-	margin-left: 10px;
+	color: var(--link-hover);
 }
 @media only screen and (max-width: 600px) {
 	.flex-box {
@@ -46,4 +62,11 @@ img{
 	img {
 		max-width: 100px;
 	}
+}
+footer {
+	font-weight: bold;
+	font-family: 'Gilroy';
+    text-transform: lowercase;
+    margin-top: auto;
+	margin-bottom: 10px;
 }
