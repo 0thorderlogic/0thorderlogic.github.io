@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap');
+@import url('../creato_display/font.css');
+@import url('../cirka/font.css');
+@import url('../gilroy/font.css');
 
 :root {
 	--background: #141420;
@@ -14,8 +17,7 @@ html, body {
 }
 html {
 	font-weight: 300;
-    font-family: 'Overpass Mono';
-	text-transform: uppercase;
+    font-family: 'Gilroy';
 	background-color: var(--background);
 	color: var(--text);
 }
@@ -43,6 +45,10 @@ h1 {
 
 	font-weight: 300;
 }
+h2,h3,h4,h5,h6 {
+	font-family: 'Overpass Mono';
+	text-transform: uppercase;
+}
 img {
 	width: 100px;
 }
@@ -54,19 +60,29 @@ a:hover {
 	text-decoration: none;
 	color: var(--link-hover);
 }
-@media only screen and (max-width: 600px) {
-	.flex-box {
-		display: flex;
-		justify-content: center;
-	}
-	img {
-		max-width: 100px;
-	}
+#right {
+	margin-left: 10px;
 }
 footer {
 	font-weight: bold;
-	font-family: 'Gilroy';
-    text-transform: lowercase;
+	font-family: 'Overpass Mono';
+    text-transform: uppercase;
     margin-top: auto;
 	margin-bottom: 10px;
+}
+/* Add this CSS to your existing style.css file */
+
+.view {
+    margin-left: auto;
+    text-align: right;
+    display: inline-block;
+}
+.cv-ist li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cv-ist li a {
+	text-transform: uppercase;
+	font-family: 'Overpass Mono';
 }
